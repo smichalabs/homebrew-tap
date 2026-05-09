@@ -5,13 +5,13 @@
 class Bctl < Formula
   desc "A polished CLI for Britive JIT access management"
   homepage "https://github.com/smichalabs/britivectl-releases"
-  version "0.9.2"
+  version "0.10.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/smichalabs/britivectl-releases/releases/download/v0.9.2/bctl_Darwin_amd64.tar.gz"
-      sha256 "ca128f55cde6ca99ccc082e5fc37bd507914c11b4f728411668738026eeafa35"
+      url "https://github.com/smichalabs/britivectl-releases/releases/download/v0.10.0/bctl_Darwin_amd64.tar.gz"
+      sha256 "874d90d3f964911c868d02bd1feca7aa4c797a33a6460c0e18ff2b34da83cb25"
 
       define_method(:install) do
         bin.install "bctl"
@@ -21,8 +21,8 @@ class Bctl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/smichalabs/britivectl-releases/releases/download/v0.9.2/bctl_Darwin_arm64.tar.gz"
-      sha256 "706a14e490564c16fca607cae10fff0ac9006833688cfc5ad9c5ded6a246a5b5"
+      url "https://github.com/smichalabs/britivectl-releases/releases/download/v0.10.0/bctl_Darwin_arm64.tar.gz"
+      sha256 "427f93e8c1069551476070ca02fe936688dc325605a0d7227e7e40d131932f5a"
 
       define_method(:install) do
         bin.install "bctl"
@@ -35,8 +35,8 @@ class Bctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/smichalabs/britivectl-releases/releases/download/v0.9.2/bctl_Linux_amd64.tar.gz"
-      sha256 "6fff10eef9b760819f03ca5eb888952ad30110967334c81b0841ef7fe42d8e2d"
+      url "https://github.com/smichalabs/britivectl-releases/releases/download/v0.10.0/bctl_Linux_amd64.tar.gz"
+      sha256 "a2aa8a4dfcda6f600a9b88fb167d58a1b4724d3d0a62330f6dd3d23380a87b70"
       define_method(:install) do
         bin.install "bctl"
         bash_completion.install "completions/bctl.bash" => "bctl"
@@ -45,8 +45,8 @@ class Bctl < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/smichalabs/britivectl-releases/releases/download/v0.9.2/bctl_Linux_arm64.tar.gz"
-      sha256 "506644938baecddeed7b55a99d762a71adae5fcdd9dffa512ac5cdb97889c29b"
+      url "https://github.com/smichalabs/britivectl-releases/releases/download/v0.10.0/bctl_Linux_arm64.tar.gz"
+      sha256 "712d9bb6ef14c22490bce613e2afe120b33098b311bc4f1aa58f363245fe2f42"
       define_method(:install) do
         bin.install "bctl"
         bash_completion.install "completions/bctl.bash" => "bctl"
